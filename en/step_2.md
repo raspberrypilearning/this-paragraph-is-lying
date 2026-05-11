@@ -14,7 +14,7 @@ language: javascript
 filename: script.js
 line_numbers: true
 line_number_start: 15
-line_highlights: 15-29
+line_highlights: 16-29
 ---
 // Check each clue and build the hidden message.
 function updateMessage() {

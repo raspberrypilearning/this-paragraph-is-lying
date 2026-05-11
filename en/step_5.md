@@ -15,8 +15,8 @@ Change one hidden fragment by editing a `data-fragment` value in `index.html`.
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 40
-line_highlights: 40-40
+line_number_start: 44
+line_highlights: 44-44
 ---
 <button class="clue-word" data-fragment="vanished" aria-pressed="false" type="button">pasta</button>
 --- /code ---
@@ -36,8 +36,8 @@ The hidden message follows the order of the clue buttons in the paragraph, not t
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 47
-line_highlights: 47-47
+line_number_start: 53
+line_highlights: 53-53
 ---
 <button class="clue-word" data-fragment="yesterday" aria-pressed="false" type="button">sandwich</button>
 --- /code ---

@@ -15,8 +15,8 @@ Try a new style for found clue words by editing `.clue-word.is-found` in `style.
 language: css
 filename: style.css
 line_numbers: true
-line_number_start: 144
-line_highlights: 144-148
+line_number_start: 163
+line_highlights: 164-170
 ---
 /* Try a new look for clues that have been found. */
 .clue-word.is-found {
