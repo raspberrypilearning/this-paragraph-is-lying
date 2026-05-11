@@ -1,0 +1,225 @@
+/* The layout is finished so learners can focus on the clue mechanic. */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #11131f;
+  --panel: #232941;
+  --text: #f8f2ff;
+  --muted: #c9c0dc;
+  --clue: #82fff3;
+  --warning: #fff176;
+  --dark-text: #11131f;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(130, 255, 243, 0.16), transparent 28rem),
+    radial-gradient(circle at bottom right, rgba(255, 122, 200, 0.14), transparent 28rem),
+    var(--background);
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  width: min(960px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.hero {
+  padding: 2rem 0 1rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(130, 255, 243, 0.55);
+  border-radius: 999px;
+  color: var(--clue);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+h1,
+h2 {
+  margin: 0;
+  line-height: 1.05;
+}
+
+h1 {
+  max-width: 800px;
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.intro,
+.hint-text,
+.missions {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 1rem 0 0;
+  font-size: 1.1rem;
+}
+
+.panel {
+  margin-top: 1.25rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 1.25rem;
+  background: linear-gradient(145deg, rgba(35, 41, 65, 0.98), rgba(20, 24, 39, 0.98));
+  box-shadow: 0 1.5rem 3rem var(--shadow);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.hint-text {
+  margin: 0.45rem 0 0;
+}
+
+.counter {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  background: #191d2e;
+  color: var(--clue);
+  font-weight: 900;
+  text-align: center;
+}
+
+.paragraph-box {
+  margin-top: 1.2rem;
+  padding: clamp(1rem, 4vw, 1.6rem);
+  border-radius: 1rem;
+  background:
+    linear-gradient(rgba(17, 19, 31, 0.9), rgba(17, 19, 31, 0.9)),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.04) 2px,
+      transparent 2px,
+      transparent 12px
+    );
+  font-size: clamp(1.2rem, 3vw, 1.65rem);
+  line-height: 1.75;
+}
+
+.paragraph-box p {
+  margin: 0 0 1rem;
+}
+
+.paragraph-box p:last-child {
+  margin-bottom: 0;
+}
+
+.clue-word {
+  display: inline;
+  margin: 0;
+  padding: 0.05em 0.2em;
+  border: 0;
+  border-bottom: 0.12em dotted rgba(130, 255, 243, 0.65);
+  border-radius: 0.35em;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.clue-word:hover,
+.clue-word:focus-visible {
+  color: var(--dark-text);
+  background: var(--warning);
+  outline: none;
+}
+
+.clue-word:focus-visible {
+  outline: 0.16em solid var(--clue);
+  outline-offset: 0.08em;
+}
+
+.clue-word.is-found {
+  color: var(--dark-text);
+  background: var(--clue);
+  border-bottom-style: solid;
+  font-weight: 900;
+}
+
+.clue-word.is-found::after {
+  content: " ✦";
+  font-size: 0.75em;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.controls button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.85rem 1.05rem;
+  color: var(--dark-text);
+  background: var(--clue);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.controls button:hover,
+.controls button:focus-visible {
+  outline: 0.16rem solid var(--warning);
+  outline-offset: 0.16rem;
+}
+
+.hidden-message {
+  min-height: 4rem;
+  margin: 1rem 0 0;
+  padding: 1.1rem;
+  border-radius: 1rem;
+  color: var(--dark-text);
+  background: linear-gradient(135deg, var(--clue), var(--warning));
+  font-size: clamp(1.3rem, 4vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.missions {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 680px) {
+  .panel-header {
+    flex-direction: column;
+  }
+
+  .counter,
+  .controls button {
+    width: 100%;
+  }
+}

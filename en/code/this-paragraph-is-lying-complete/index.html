@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This Paragraph Is Lying</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <p class="eyebrow">TEXT DETECTIVE MODE</p>
+        <h1>This Paragraph Is Lying</h1>
+        <p class="intro">
+          This paragraph looks normal. That is how it gets you. Some words are
+          hiding a secret message. Click anything suspicious and make the
+          paragraph confess.
+        </p>
+      </section>
+
+      <section class="panel" aria-labelledby="paragraph-heading">
+        <header class="panel-header">
+          <div>
+            <h2 id="paragraph-heading">The suspicious paragraph</h2>
+            <p class="hint-text">
+              Click the dotted words to reveal the hidden message.
+            </p>
+          </div>
+
+          <p class="counter">
+            <span id="found-count">0</span>/<span id="total-count">0</span>
+            clues found
+          </p>
+        </header>
+
+        <!-- Each clue button shows one word and stores one hidden fragment. -->
+        <article class="paragraph-box" aria-label="A strange paragraph hiding a secret message">
+          <p>
+            The lunch menu looked normal until the
+            <button class="clue-word" data-fragment="your" aria-pressed="false" type="button">soup</button>
+            started bubbling, the
+            <button class="clue-word" data-fragment="homework" aria-pressed="false" type="button">fruit</button>
+            rolled backwards, and the
+            <button class="clue-word" data-fragment="escaped" aria-pressed="false" type="button">pasta</button>
+            requested legal advice.
+          </p>
+
+          <p>
+            Nobody panicked, except the
+            <button class="clue-word" data-fragment="into" aria-pressed="false" type="button">toast</button>
+            and the
+            <button class="clue-word" data-fragment="space" aria-pressed="false" type="button">printer</button>.
+          </p>
+        </article>
+
+        <div class="controls">
+          <button id="reset-button" type="button">Reset</button>
+        </div>
+      </section>
+
+      <section class="panel message-card" aria-labelledby="message-heading">
+        <h2 id="message-heading">The hidden message</h2>
+        <p id="hidden-message" class="hidden-message" aria-live="polite">
+          Click clues to reveal the message.
+        </p>
+      </section>
+
+      <section class="panel" aria-labelledby="remix-heading">
+        <h2 id="remix-heading">Remix missions</h2>
+        <ul class="missions">
+          <li>Change the secret message by editing the <code>data-fragment</code> values.</li>
+          <li>Change the visible clue words inside the paragraph.</li>
+          <li>Add one new clue word.</li>
+          <li>Change the clue colours in <code>style.css</code>.</li>
+          <li>Give your puzzle to someone else and see if they can solve it.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

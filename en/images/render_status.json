@@ -1,0 +1,47 @@
+{
+  "attempted": true,
+  "failed_steps": [],
+  "generated_steps": [],
+  "renderer": null,
+  "skipped_steps": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "steps": {
+    "1": {
+      "output": "images/step_1_output.png",
+      "reason": "no render target supplied",
+      "status": "skipped"
+    },
+    "2": {
+      "output": "images/step_2_output.png",
+      "reason": "no render target supplied",
+      "status": "skipped"
+    },
+    "3": {
+      "output": "images/step_3_output.png",
+      "reason": "no render target supplied",
+      "status": "skipped"
+    },
+    "4": {
+      "output": "images/step_4_output.png",
+      "reason": "no render target supplied",
+      "status": "skipped"
+    },
+    "5": {
+      "output": "images/step_5_output.png",
+      "reason": "no render target supplied",
+      "status": "skipped"
+    },
+    "6": {
+      "output": "images/step_6_output.png",
+      "reason": "no render target supplied",
+      "status": "skipped"
+    }
+  },
+  "toolchain_available": true
+}

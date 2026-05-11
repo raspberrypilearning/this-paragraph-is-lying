@@ -1,14 +1,19 @@
-title: Project title in sentence case
 hero_image: images/banner.png
-description: A short description of the project
+description: Reveal a hidden message by clicking clue words in a strange paragraph.
 listed: false
 pdf: false
+landing: true
 steps:
-  - title: What you will make
-  - title: Step title
+  - title: 'Inspect a clue word'
+  - title: 'Build the hidden message'
+  - title: 'Make the clues clickable'
     completion:
-      - engaged      
-  - title: Challenge
+      - 'engaged'
+  - title: 'Reset the clues'
+    completion:
+      - 'internal'
+  - title: 'Remix the puzzle'
+    completion:
+      - 'external'
+  - title: 'Challenge: Change the colours and finish the message'
     challenge: true
-    completion:
-      - external

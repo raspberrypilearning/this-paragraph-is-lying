@@ -1,45 +1,42 @@
-## What you will make
-OR
-## What you will do - change meta if you use this
+<h2 class="c-project-heading--task">Inspect a clue word</h2>
 
-A brief description - one or two sentences. 
+You will run the starter and look inside one clue button to see how the paragraph is hiding a secret word.
 
---- print-only ---
+<h2 class="c-project-heading--explainer">A visible word can secretly carry a different hidden word</h2>
 
-![ALT TEXT](images/IMAGE.png)
+### Step 1
 
---- /print-only ---
+Run the starter project.
 
---- no-print ---
+You should see:
 
-[Editor embed](https://editor.raspberrypi.org/en/embed/viewer/project-slug)
+- a strange paragraph
+- five dotted clue words
+- a hidden message box
+- a Reset button
 
---- /no-print ---
+The clue words do not work yet. You will add that code.
 
---- no-print ---
+### Step 2
 
-Video embed
+Find one of the clue buttons in `index.html`. The text between the tags is the word people see, and `data-fragment` stores the secret word for the message.
 
-<video width="640" height="360" controls>
-<source src="images/videoname.mp4" type="video/mp4">
-</video>
+<div class="c-project-code">
 
-Youtube embed 
-<html>
-<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
-<iframe style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/XXXXXXXXX?rel=0&cc_load_policy=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-</iframe>
-</div><br>
-</html>
+--- code ---
+---
+language: html
+filename: index.html
+line_numbers: true
+line_number_start: 37
+line_highlights: 37-37
+---
+<!-- fruit is the visible word, but homework is the hidden fragment. -->
+<button class="clue-word" data-fragment="homework" aria-pressed="false" type="button">fruit</button>
+--- /code ---
 
-Scratch embed
-<div class="scratch-preview">
- <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/XXXXXXXXX/?autostart=false" frameborder="0"></iframe>
 </div>
 
---- /no-print ---
+<h2 class="c-project-heading--task">Test</h2>
 
-### You will need:
-- a
-- b
-- c
+The page should load with five dotted clue words, and clicking them should not reveal the hidden message yet.
