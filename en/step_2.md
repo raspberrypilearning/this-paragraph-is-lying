@@ -1,6 +1,6 @@
 <h2 class="c-project-heading--task">Build the hidden message</h2>
 
-You will build the message from the clue buttons in paragraph order.
+Build the message from the clue buttons in paragraph order.
 
 <h2 class="c-project-heading--explainer">Found clues will reveal words later, and missing clues show blanks</h2>
 
@@ -13,23 +13,20 @@ Add this function below `// Add your code below.` in `script.js`.
 language: javascript
 filename: script.js
 line_numbers: true
-line_number_start: 15
-line_highlights: 15-30
+line_number_start: 12
+line_highlights: 12-24
 ---
 function updateMessage() {
   const fragments = [];
-  let found = 0;
 
   for (const clue of clueWords) {
     if (clue.classList.contains("is-found")) {
       fragments.push(clue.dataset.fragment);
-      found += 1;
     } else {
       fragments.push("___");
     }
   }
 
-  foundCount.textContent = found;
   hiddenMessage.textContent = fragments.join(" ");
 }
 --- /code ---
@@ -47,8 +44,8 @@ When you call `updateMessage()`, the starter instruction changes into five blank
 language: javascript
 filename: script.js
 line_numbers: true
-line_number_start: 32
-line_highlights: 32-32
+line_number_start: 26
+line_highlights: 26-26
 ---
 updateMessage();
 --- /code ---
@@ -57,4 +54,4 @@ updateMessage();
 
 <h2 class="c-project-heading--task">Test</h2>
 
-The hidden message box should now show five blanks instead of the starter instruction, and the clue counter should still say `0`.
+The hidden message box should now show five blanks instead of the starter instruction.

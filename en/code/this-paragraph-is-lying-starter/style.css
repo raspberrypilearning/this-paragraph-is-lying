@@ -32,23 +32,7 @@ button {
 .app {
   width: min(960px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 2rem 0 4rem;
-}
-
-.hero {
-  padding: 2rem 0 1rem;
-}
-
-.eyebrow {
-  display: inline-block;
-  margin: 0 0 1rem;
-  padding: 0.35rem 0.75rem;
-  border: 1px solid rgba(130, 255, 243, 0.55);
-  border-radius: 999px;
-  color: var(--clue);
-  font-size: 0.8rem;
-  font-weight: 900;
-  letter-spacing: 0.14em;
+  padding: 1.5rem 0 3rem;
 }
 
 h1,
@@ -58,7 +42,7 @@ h2 {
 }
 
 h1 {
-  max-width: 800px;
+  margin-bottom: 1.25rem;
   font-size: clamp(2.4rem, 8vw, 5rem);
   letter-spacing: -0.05em;
 }
@@ -67,17 +51,9 @@ h2 {
   font-size: clamp(1.35rem, 3vw, 2rem);
 }
 
-.intro,
-.hint-text,
-.missions {
+.hint-text {
   color: var(--muted);
   line-height: 1.6;
-}
-
-.intro {
-  max-width: 700px;
-  margin: 1rem 0 0;
-  font-size: 1.1rem;
 }
 
 .panel {
@@ -89,26 +65,8 @@ h2 {
   box-shadow: 0 1.5rem 3rem var(--shadow);
 }
 
-.panel-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
 .hint-text {
   margin: 0.45rem 0 0;
-}
-
-.counter {
-  flex: 0 0 auto;
-  margin: 0;
-  padding: 0.75rem 1rem;
-  border-radius: 1rem;
-  background: #191d2e;
-  color: var(--clue);
-  font-weight: 900;
-  text-align: center;
 }
 
 .paragraph-box {
@@ -208,17 +166,7 @@ h2 {
   line-height: 1.25;
 }
 
-.missions {
-  margin: 1rem 0 0;
-  padding-left: 1.25rem;
-}
-
 @media (max-width: 680px) {
-  .panel-header {
-    flex-direction: column;
-  }
-
-  .counter,
   .controls button {
     width: 100%;
   }

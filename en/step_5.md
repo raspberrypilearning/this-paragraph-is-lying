@@ -1,6 +1,6 @@
 <h2 class="c-project-heading--task">Remix the puzzle</h2>
 
-You will change the hidden message and add one more clue word of your own.
+Change the hidden message and add one more clue word of your own.
 
 <h2 class="c-project-heading--explainer">You can remix the puzzle by editing HTML instead of changing the JavaScript</h2>
 
@@ -15,8 +15,8 @@ Change one hidden fragment by editing a `data-fragment` value in `index.html`.
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 44
-line_highlights: 44-44
+line_number_start: 27
+line_highlights: 27-27
 ---
 <button class="clue-word" data-fragment="vanished" aria-pressed="false" type="button">pasta</button>
 --- /code ---
@@ -36,8 +36,8 @@ The hidden message follows the order of the clue buttons in the paragraph, not t
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 53
-line_highlights: 53-53
+line_number_start: 36
+line_highlights: 36-36
 ---
 <button class="clue-word" data-fragment="yesterday" aria-pressed="false" type="button">sandwich</button>
 --- /code ---
@@ -46,4 +46,4 @@ line_highlights: 53-53
 
 <h2 class="c-project-heading--task">Test</h2>
 
-Your puzzle should now reveal a different message, and the total clue count should go up if you added another clue button.
+Your puzzle should now reveal a different message, and the hidden message should have one extra blank if you added another clue button.

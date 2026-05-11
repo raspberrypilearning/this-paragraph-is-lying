@@ -8,30 +8,13 @@
   </head>
   <body>
     <main class="app">
-      <section class="hero">
-        <p class="eyebrow">TEXT DETECTIVE MODE</p>
-        <h1>This Paragraph Is Lying</h1>
-        <p class="intro">
-          This paragraph looks normal. That is how it gets you. Some words are
-          hiding a secret message. Click anything suspicious and make the
-          paragraph confess.
-        </p>
-      </section>
+      <h1>This Paragraph Is Lying</h1>
 
       <section class="panel" aria-labelledby="paragraph-heading">
-        <header class="panel-header">
-          <div>
-            <h2 id="paragraph-heading">The suspicious paragraph</h2>
-            <p class="hint-text">
-              Click the dotted words to reveal the hidden message.
-            </p>
-          </div>
-
-          <p class="counter">
-            <span id="found-count">0</span>/<span id="total-count">0</span>
-            clues found
-          </p>
-        </header>
+        <h2 id="paragraph-heading">The suspicious paragraph</h2>
+        <p class="hint-text">
+          Click the dotted words to reveal the hidden message.
+        </p>
 
         <!-- Each clue button shows one word and stores one hidden fragment. -->
         <article class="paragraph-box" aria-label="A strange paragraph hiding a secret message">
@@ -58,22 +41,11 @@
         </div>
       </section>
 
-      <section class="panel message-card" aria-labelledby="message-heading">
+      <section class="panel" aria-labelledby="message-heading">
         <h2 id="message-heading">The hidden message</h2>
         <p id="hidden-message" class="hidden-message" aria-live="polite">
           Click clues to reveal the message.
         </p>
-      </section>
-
-      <section class="panel" aria-labelledby="remix-heading">
-        <h2 id="remix-heading">Remix missions</h2>
-        <ul class="missions">
-          <li>Change the secret message by editing the <code>data-fragment</code> values.</li>
-          <li>Change the visible clue words inside the paragraph.</li>
-          <li>Add one new clue word.</li>
-          <li>Change the clue colours in <code>style.css</code>.</li>
-          <li>Give your puzzle to someone else and see if they can solve it.</li>
-        </ul>
       </section>
     </main>
 

@@ -1,6 +1,6 @@
 <h2 class="c-project-heading--task">Challenge: Change the colours and finish the message</h2>
 
-You will customise the finished puzzle and add a small ending when every clue is found.
+Customise the finished puzzle and add a small ending when every clue is found.
 
 <h2 class="c-project-heading--explainer">Now that the mechanic works, you can change the look without touching the core logic</h2>
 
@@ -15,8 +15,8 @@ Try a new style for found clue words by editing `.clue-word.is-found` in `style.
 language: css
 filename: style.css
 line_numbers: true
-line_number_start: 164
-line_highlights: 164-170
+line_number_start: 122
+line_highlights: 122-128
 ---
 .clue-word.is-found {
   background: #fff176;
@@ -40,12 +40,12 @@ Add this check at the end of `updateMessage()` in `script.js`, after the line th
 language: javascript
 filename: script.js
 line_numbers: true
-line_number_start: 29
-line_highlights: 31-33
+line_number_start: 23
+line_highlights: 25-27
 ---
 hiddenMessage.textContent = fragments.join(" ");
 
-if (found === clueWords.length) {
+if (!fragments.includes("___")) {
   hiddenMessage.textContent = fragments.join(" ") + "!";
 }
 --- /code ---

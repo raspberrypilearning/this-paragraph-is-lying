@@ -1,6 +1,6 @@
 <h2 class="c-project-heading--task">Make the clues clickable</h2>
 
-You will make each clue switch between found and not found when it is clicked.
+Make each clue switch between found and not found when it is clicked.
 
 <h2 class="c-project-heading--explainer">The click event uses the found class as the clue state</h2>
 
@@ -13,8 +13,8 @@ Add this loop below the `updateMessage()` function. Keep the final `updateMessag
 language: javascript
 filename: script.js
 line_numbers: true
-line_number_start: 32
-line_highlights: 32-39
+line_number_start: 26
+line_highlights: 26-33
 ---
 for (const clue of clueWords) {
   clue.addEventListener("click", () => {
@@ -30,4 +30,4 @@ for (const clue of clueWords) {
 
 <h2 class="c-project-heading--task">Test</h2>
 
-When you click a dotted clue word, it should glow, reveal one message fragment, update the counter, and hide that fragment again on the next click.
+When you click a dotted clue word, it should glow, reveal one message fragment, and hide that fragment again on the next click.
