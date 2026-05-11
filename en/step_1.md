@@ -28,10 +28,9 @@ Find one of the clue buttons in `index.html`. The text between the tags is the w
 language: html
 filename: index.html
 line_numbers: true
-line_number_start: 41
+line_number_start: 42
 line_highlights: 42-42
 ---
-<!-- fruit is the visible word, but homework is the hidden fragment. -->
 <button class="clue-word" data-fragment="homework" aria-pressed="false" type="button">fruit</button>
 --- /code ---
 

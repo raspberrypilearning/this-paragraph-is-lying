@@ -15,10 +15,9 @@ Try a new style for found clue words by editing `.clue-word.is-found` in `style.
 language: css
 filename: style.css
 line_numbers: true
-line_number_start: 163
+line_number_start: 164
 line_highlights: 164-170
 ---
-/* Try a new look for clues that have been found. */
 .clue-word.is-found {
   background: #fff176;
   color: #11131f;
@@ -42,8 +41,10 @@ language: javascript
 filename: script.js
 line_numbers: true
 line_number_start: 29
-line_highlights: 29-31
+line_highlights: 31-33
 ---
+hiddenMessage.textContent = fragments.join(" ");
+
 if (found === clueWords.length) {
   hiddenMessage.textContent = fragments.join(" ") + "!";
 }

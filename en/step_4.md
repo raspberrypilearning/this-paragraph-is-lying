@@ -13,8 +13,8 @@ Add this code under your click loop.
 language: javascript
 filename: script.js
 line_numbers: true
-line_number_start: 40
-line_highlights: 40-46
+line_number_start: 41
+line_highlights: 41-47
 ---
 resetButton.addEventListener("click", () => {
   for (const clue of clueWords) {

@@ -13,8 +13,8 @@ Add this loop below the `updateMessage()` function. Keep the final `updateMessag
 language: javascript
 filename: script.js
 line_numbers: true
-line_number_start: 31
-line_highlights: 31-38
+line_number_start: 32
+line_highlights: 32-39
 ---
 for (const clue of clueWords) {
   clue.addEventListener("click", () => {

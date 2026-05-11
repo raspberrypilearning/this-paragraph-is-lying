@@ -14,12 +14,12 @@ language: javascript
 filename: script.js
 line_numbers: true
 line_number_start: 15
-line_highlights: 16-29
+line_highlights: 15-30
 ---
-// Check each clue and build the hidden message.
 function updateMessage() {
   const fragments = [];
   let found = 0;
+
   for (const clue of clueWords) {
     if (clue.classList.contains("is-found")) {
       fragments.push(clue.dataset.fragment);
@@ -28,6 +28,7 @@ function updateMessage() {
       fragments.push("___");
     }
   }
+
   foundCount.textContent = found;
   hiddenMessage.textContent = fragments.join(" ");
 }
@@ -46,8 +47,8 @@ When you call `updateMessage()`, the starter instruction changes into five blank
 language: javascript
 filename: script.js
 line_numbers: true
-line_number_start: 31
-line_highlights: 31-31
+line_number_start: 32
+line_highlights: 32-32
 ---
 updateMessage();
 --- /code ---
