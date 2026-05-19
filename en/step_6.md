@@ -1,37 +1,8 @@
-<h2 class="c-project-heading--task">Challenge: Change the colours and finish the message</h2>
+## Challenge: add a complete message
 
-Customise the finished puzzle and add a small ending when every clue is found.
+At the moment nothing happens when you find all five clues. Add something that appears when the puzzle is complete.
 
-<h2 class="c-project-heading--explainer">Now that the mechanic works, you can change the look without touching the core logic</h2>
-
-### Step 1
-
-Try a new style for found clue words by editing `.clue-word.is-found` in `style.css`.
-
-<div class="c-project-code">
-
---- code ---
----
-language: css
-filename: style.css
-line_numbers: true
-line_number_start: 122
-line_highlights: 122-128
----
-.clue-word.is-found {
-  background: #fff176;
-  color: #11131f;
-  border-bottom-color: #ff7ac8;
-  border-bottom-style: solid;
-  font-weight: 900;
-}
---- /code ---
-
-</div>
-
-### Step 2
-
-Add this check at the end of `updateMessage()` in `script.js`, after the line that updates `hiddenMessage.textContent`.
+In `script.js` add the code below and change `" 🎉"` to your own emoji, a celebration word, or short phrase.
 
 <div class="c-project-code">
 
@@ -40,18 +11,25 @@ Add this check at the end of `updateMessage()` in `script.js`, after the line th
 language: javascript
 filename: script.js
 line_numbers: true
-line_number_start: 23
-line_highlights: 25-27
+line_number_start: 22
+line_highlights: 24-26
 ---
-hiddenMessage.textContent = fragments.join(" ");
+hiddenMessage.textContent = words.join(" ");
 
-if (!fragments.includes("___")) {
-  hiddenMessage.textContent = fragments.join(" ") + "!";
+if (!words.includes("___")) {
+  hiddenMessage.textContent = words.join(" ") + " 🎉";
 }
 --- /code ---
 
 </div>
 
-<h2 class="c-project-heading--task">Test</h2>
 
-Found clues should use your new colours, and the completed hidden message should end with `!` when every clue has been found.
+### Now run your code
+
+Find all five clues. When you click the last one, your complete message should appear at the end.
+
+<div class="c-project-output">
+
+![All five clues are found and the complete hidden message shows the added ending.](images/step_6.png)
+
+</div>

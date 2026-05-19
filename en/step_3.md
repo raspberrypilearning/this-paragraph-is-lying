@@ -1,33 +1,45 @@
-<h2 class="c-project-heading--task">Make the clues clickable</h2>
+## Add your hidden message
 
-Make each clue switch between found and not found when it is clicked.
+Each clue button has a `hidden-word` value — that is the secret word that appears when someone clicks it. 
 
-<h2 class="c-project-heading--explainer">The click event uses the found class as the clue state</h2>
-
-Add this loop below the `updateMessage()` function. Keep the final `updateMessage();` call at the bottom of your file.
+In `index.html` change all five to make a hidden message of your own.
 
 <div class="c-project-code">
 
 --- code ---
 ---
-language: javascript
-filename: script.js
+language: html
+filename: index.html
 line_numbers: true
-line_number_start: 26
-line_highlights: 26-33
+line_number_start: 21
+line_highlights: 23,25,27,33,35
 ---
-for (const clue of clueWords) {
-  clue.addEventListener("click", () => {
-    const isFound = clue.classList.contains("is-found");
+<p>
+  The lunch menu looked normal until the
+  <button class="clue-word" hidden-word="your" aria-pressed="false" type="button">soup</button>
+  started bubbling, the
+  <button class="clue-word" hidden-word="homework" aria-pressed="false" type="button">fruit</button>
+  rolled backwards, and the
+  <button class="clue-word" hidden-word="escaped" aria-pressed="false" type="button">pasta</button>
+  requested legal advice.
+</p>
 
-    setFound(clue, !isFound);
-    updateMessage();
-  });
-}
+<p>
+  Nobody panicked, except the
+  <button class="clue-word" hidden-word="into" aria-pressed="false" type="button">toast</button>
+  and the
+  <button class="clue-word" hidden-word="space" aria-pressed="false" type="button">printer</button>.
+</p>
 --- /code ---
 
 </div>
 
-<h2 class="c-project-heading--task">Test</h2>
+### Now run your code
 
-When you click a dotted clue word, it should glow, reveal one message fragment, and hide that fragment again on the next click.
+Click all five clue words. The hidden message should spell out your new sentence.
+
+<div class="c-project-output">
+
+![All five clue words are clicked and the hidden message spells out the new sentence.](images/step_3.png)
+
+</div>

@@ -1,49 +1,35 @@
-<h2 class="c-project-heading--task">Remix the puzzle</h2>
+## Reset the clues
 
-Change the hidden message and add one more clue word of your own.
-
-<h2 class="c-project-heading--explainer">You can remix the puzzle by editing HTML instead of changing the JavaScript</h2>
-
-### Step 1
-
-Change one hidden fragment by editing a `data-fragment` value in `index.html`.
+In `script.js` add this code to clear the clues.
 
 <div class="c-project-code">
 
 --- code ---
 ---
-language: html
-filename: index.html
+language: javascript
+filename: script.js
 line_numbers: true
-line_number_start: 27
-line_highlights: 27-27
+line_number_start: 34
+line_highlights: 34-40
 ---
-<button class="clue-word" data-fragment="vanished" aria-pressed="false" type="button">pasta</button>
+resetButton.addEventListener("click", () => {
+  for (const clue of clueWords) {
+    setClueFound(clue, false);
+  }
+
+  showMessage();
+});
 --- /code ---
 
 </div>
 
-### Step 2
 
-Add one more clue button to the paragraph. Keep `class="clue-word"` so JavaScript can find the clue. Keep `data-fragment` so the clue has a hidden word. Keep `aria-pressed="false"` and `type="button"` so the button starts in the right state.
+### Now run your code
 
-The hidden message follows the order of the clue buttons in the paragraph, not the order you click them.
+Click a few clue words, then click Reset. Every clue should stop glowing and the hidden message should show blanks again.
 
-<div class="c-project-code">
+<div class="c-project-output">
 
---- code ---
----
-language: html
-filename: index.html
-line_numbers: true
-line_number_start: 36
-line_highlights: 36-36
----
-<button class="clue-word" data-fragment="yesterday" aria-pressed="false" type="button">sandwich</button>
---- /code ---
+![After clicking Reset, no clue words are glowing and the hidden message shows blanks.](images/step_5.png)
 
 </div>
-
-<h2 class="c-project-heading--task">Test</h2>
-
-Your puzzle should now reveal a different message, and the hidden message should have one extra blank if you added another clue button.

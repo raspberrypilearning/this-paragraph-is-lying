@@ -1,42 +1,46 @@
-// Read clue fragments from the HTML and reveal them in paragraph order.
+// Read clue words from the HTML and reveal them in paragraph order.
 const clueWords = document.querySelectorAll(".clue-word");
 const hiddenMessage = document.querySelector("#hidden-message");
 const resetButton = document.querySelector("#reset-button");
 
-function setFound(clue, isFound) {
+function setClueFound(clue, isFound) {
   clue.classList.toggle("is-found", isFound);
   clue.setAttribute("aria-pressed", String(isFound));
 }
 
-function updateMessage() {
-  const fragments = [];
+function showMessage() {
+  const words = [];
 
   for (const clue of clueWords) {
     if (clue.classList.contains("is-found")) {
-      fragments.push(clue.dataset.fragment);
+      words.push(clue.getAttribute("hidden-word"));
     } else {
-      fragments.push("___");
+      words.push("___");
     }
   }
 
-  hiddenMessage.textContent = fragments.join(" ");
+  hiddenMessage.textContent = words.join(" ");
+
+  if (!words.includes("___")) {
+    hiddenMessage.textContent = words.join(" ") + " 🎉";
+  }
 }
 
 for (const clue of clueWords) {
   clue.addEventListener("click", () => {
     const isFound = clue.classList.contains("is-found");
 
-    setFound(clue, !isFound);
-    updateMessage();
+    setClueFound(clue, !isFound);
+    showMessage();
   });
 }
 
 resetButton.addEventListener("click", () => {
   for (const clue of clueWords) {
-    setFound(clue, false);
+    setClueFound(clue, false);
   }
 
-  updateMessage();
+  showMessage();
 });
 
-updateMessage();
+showMessage();

@@ -1,41 +1,12 @@
-<h2 class="c-project-heading--task">Build the hidden message</h2>
+## Make the clues clickable
 
-Build the message from the clue buttons in paragraph order.
+Right now clicking a clue word does nothing. Add this loop to `script.js`, below the comment that says `// Add your code below.`
 
-<h2 class="c-project-heading--explainer">Found clues will reveal words later, and missing clues show blanks</h2>
+> ### Tip
+>
+> This loop gives every clue button a click listener. When you click a clue, it switches between found and not found, and updates the message.
+{: .c-project-callout .c-project-callout--tip}
 
-Add this function below `// Add your code below.` in `script.js`.
-
-<div class="c-project-code">
-
---- code ---
----
-language: javascript
-filename: script.js
-line_numbers: true
-line_number_start: 12
-line_highlights: 12-24
----
-function updateMessage() {
-  const fragments = [];
-
-  for (const clue of clueWords) {
-    if (clue.classList.contains("is-found")) {
-      fragments.push(clue.dataset.fragment);
-    } else {
-      fragments.push("___");
-    }
-  }
-
-  hiddenMessage.textContent = fragments.join(" ");
-}
---- /code ---
-
-</div>
-
-Call the function once at the bottom of `script.js` so the blanks appear when the page loads.
-
-When you call `updateMessage()`, the starter instruction changes into five blanks. Each blank stands for one hidden fragment.
 
 <div class="c-project-code">
 
@@ -45,13 +16,33 @@ language: javascript
 filename: script.js
 line_numbers: true
 line_number_start: 26
-line_highlights: 26-26
+line_highlights: 26-33
 ---
-updateMessage();
+// Add your code below.
+
+for (const clue of clueWords) {
+  clue.addEventListener("click", () => {
+    const isFound = clue.classList.contains("is-found");
+
+    setClueFound(clue, !isFound);
+    showMessage();
+  });
+}
 --- /code ---
 
 </div>
 
-<h2 class="c-project-heading--task">Test</h2>
+### Now run your code
 
-The hidden message box should now show five blanks instead of the starter instruction.
+Click a dotted word. It should glow and reveal one word in the hidden message box. Click it again and it should go back to a blank.
+
+> ### Debugging
+>
+> If clicking does nothing, check that your loop is not accidentally inside the curly brackets `{}` of another function. It should sit on its own below `// Add your code below.`
+{: .c-project-callout .c-project-callout--debug}
+
+<div class="c-project-output">
+
+![One clue word is glowing and one word is revealed in the hidden message box.](images/step_2.png)
+
+</div>
