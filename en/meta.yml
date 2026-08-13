@@ -1,6 +1,6 @@
 hero_image: images/banner.png
 description: Reveal a hidden message by clicking clue words in a strange paragraph.
-listed: false
+listed: true
 title: This paragraph is lying
 pdf: false
 landing: true
