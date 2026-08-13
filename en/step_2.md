@@ -15,8 +15,8 @@ Right now clicking a clue word does nothing. Add this loop to `script.js`, below
 language: javascript
 filename: script.js
 line_numbers: true
-line_number_start: 26
-line_highlights: 26-33
+line_number_start: 25
+line_highlights: 27-34
 ---
 // Add your code below.
 

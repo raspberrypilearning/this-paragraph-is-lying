@@ -2,7 +2,7 @@
 
 Each clue button has a `hidden-word` value — that is the secret word that appears when someone clicks it. 
 
-In `index.html` change all five to make a hidden message of your own.
+In `index.html` change all five hidden words to make a hidden message of your own.
 
 <div class="c-project-code">
 

@@ -1,8 +1,8 @@
 ## Change the clue words
 
-Each clue button has a visible word that people for example **soup** or **fruit**. 
+Each clue button has a visible word that people **see**: in the example they are: **soup, fruit, pasta, toast** and **printer**. You can find the words in between the tags. 
 
-In `index.html` change all five to your own words.
+In `index.html` change all five visible words to your own ones:
 
 <div class="c-project-code">
 
