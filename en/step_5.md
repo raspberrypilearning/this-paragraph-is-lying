@@ -9,8 +9,8 @@ In `script.js` add this code to clear the clues.
 language: javascript
 filename: script.js
 line_numbers: true
-line_number_start: 34
-line_highlights: 34-40
+line_number_start: 36
+line_highlights: 36-42
 ---
 resetButton.addEventListener("click", () => {
   for (const clue of clueWords) {

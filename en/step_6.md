@@ -14,10 +14,11 @@ line_numbers: true
 line_number_start: 22
 line_highlights: 24-26
 ---
-hiddenMessage.textContent = words.join(" ");
+  hiddenMessage.textContent = words.join(" ");
 
-if (!words.includes("___")) {
-  hiddenMessage.textContent = words.join(" ") + " 🎉";
+  if (!words.includes("___")) {
+    hiddenMessage.textContent = words.join(" ") + " 🎉";
+  }
 }
 --- /code ---
 
