@@ -1,6 +1,6 @@
 ## Make the clues clickable
 
-Right now clicking a clue word does nothing. Add this loop to `script.js`, below the comment that says `// Add your code below.`
+Right now, if you click a clue word, nothing happens. Add this loop to `script.js`. Put it below the comment that says `// Add your code below.`
 
 > ### Tip
 >
