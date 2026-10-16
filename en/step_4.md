@@ -1,6 +1,5 @@
 ## Style it!
 
-### Step 1 
 In the project file tab, open `style.css`.
 
 > ### Tip
@@ -8,8 +7,6 @@ In the project file tab, open `style.css`.
 > Change `background` to a colour you like. Add `border-bottom-color` to choose the line colour. Colours use hex codes — `#ff0000` is red, `#0000ff` is blue, `#ffffff` is white.
 {: .c-project-callout .c-project-callout--tip}
 
-
-### Step 2
 Change how the clue words look by editing `.clue-word.is-found`.
 
 <div class="c-project-code">
@@ -32,8 +29,6 @@ line_highlights: 123,125
 --- /code ---
 
 </div>
-
-### Step 3
 
 You can also change the colours of the hidden message box. Find `.hidden-message` in `style.css` and change the two colours in the `background` line.
 
