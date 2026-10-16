@@ -73,7 +73,7 @@ Click a clue word. It should glow in your new colours.
 
 > ### Tip
 >
-> Search "hex colour picker" in a browser to find the hex code for any colour you want.
+> Search "hex colour picker" in a web browser to find the hex code for any colour you want.
 {: .c-project-callout .c-project-callout--tip}
 
 <div class="c-project-output">
