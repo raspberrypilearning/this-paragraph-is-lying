@@ -1,8 +1,8 @@
 ## Change the clue words
 
-Each clue button has a visible word that people **see**: in the example they are: **soup, fruit, pasta, toast** and **printer**. You can find the words in between the tags. 
+Each clue button has a visible word that people can **see**. In our example these are: **soup, fruit, pasta, toast** and **printer**. You can find the words in between the tags. 
 
-In `index.html` change all five visible words to your own ones:
+In `index.html`, change all five visible words to your own ones:
 
 <div class="c-project-code">
 
@@ -36,7 +36,7 @@ line_highlights: 23,25,27,33,35
 
 ### Now run your code
 
-Run the project. Your new words should appear in the paragraph.
+Check your new words appear in the paragraph.
 
 <div class="c-project-output">
 
